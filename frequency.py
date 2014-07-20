@@ -20,14 +20,19 @@ def wordCount(tweet_file):
                     wordCount[token] = 1
     printFrequency(totalWord, wordCount) # print frequency
 
+
+
 def printFrequency(totalWord, wordCount):
     for word in wordCount.keys():
         frequency = wordCount[word]/float(totalWord)
         print word.lstrip(),frequency
 
+
+
 def main():
     tweet_file = open(sys.argv[1])
     wordCount(tweet_file)
+
 
 
 if __name__ == '__main__':
